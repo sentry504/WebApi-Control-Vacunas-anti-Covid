@@ -14,5 +14,3 @@ Para este proyecto solo necesitas el **Diseñador de informes RDLC de Microsoft*
 Busca el archivo de script .sql **Control de vacunas covid.sql** en el proyecto y ejecutalo para crear la base de datos
 ### Preview del proyecto en ejecucion
 ![sistema1](Sistema1.png)
-  
-![sistema2](Sistema2.png)
