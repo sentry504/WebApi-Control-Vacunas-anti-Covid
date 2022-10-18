@@ -1,0 +1,6 @@
+@using WebApi_Control_Vacunas_anti_Covid.Areas.HelpPage.ModelDescriptions
+@model CollectionModelDescription
+@if (Model.ElementDescription is ComplexTypeModelDescription)
+{
+    @Html.DisplayFor(m => m.ElementDescription)
+}

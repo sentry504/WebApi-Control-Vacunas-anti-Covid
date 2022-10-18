@@ -1,0 +1,50 @@
+﻿h3{
+    color:darkslategrey;
+    margin-left: 6px;
+}
+
+input {
+    border-radius: 4px;
+    border: none;
+    background-color: white;
+}
+
+.agregar {
+    border: 0ch;
+    width: max-content;
+    height: max-content;
+    margin-block:0px;
+}
+
+section {
+    background-color: burlywood;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 8px;
+    border-color: darkcyan;
+    border-width: 5px;
+}
+
+.add{
+    width:fit-content;
+}
+
+.conteiner-animacion {
+    float: right;
+}
+
+label {
+    padding-bottom: 0.3em;
+    margin-left: 3px;
+}
+
+.campo {
+    padding-bottom: 0.3em;
+    margin-left:3px;
+}
+
+.boton {
+    border-radius: 6px;
+    border-color: darkcyan;
+    border-width: 2px;
+}

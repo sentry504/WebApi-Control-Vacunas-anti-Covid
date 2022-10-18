@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Control de vacunas anti Covid</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/css/style.css" />
+</head>
+<body>
+    <h1><b>Gestion de Ciudadanos</b></h1>
+    <h3>Agregar Ciudadano</h3>
+    <section class="agregar">
+        <!--agregar registro-->
+        <div class="add">
+            <form action="javascript:void(0);" method="POST" onsubmit="addCiudadano()">
+                <div class="campo">
+                    <label>Identidad:</label>
+                    <input type="text" id="Identidad">
+                </div>
+                <div class="campo">
+                    <label>Nombre:</label>
+                    <input type="text" id="Nombre">
+                </div>
+                <div class="campo">
+                    <label>Apellido:</label>
+                    <input type="text" id="Apellido">
+                </div>
+                <div class="campo">
+                    <label>Edad:</label>
+                    <input type="text" id="Edad">
+                </div>
+                <div class="campo">
+                    <label>Residencia:</label>
+                    <input type="text" id="Residencia">
+                </div>
+                <div class="campo">
+                    <label>Vacunas:</label>
+                    <input type="text" id="Vacunas">
+                </div>
+                <div class="campo">
+                    <label>ID vacuna:</label>
+                    <select name="Vacunas" id="IDVacuna">
+                        <option value="V1">AztraZeneca</option>
+                        <option value="V2">Pfizer</option>
+                        <option value="V3">Moderna</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label>Fecha Ultima Dosis:</label>
+                    <input type="date" id="FechaUltimaDosis">
+                    <button class="boton" type="submit">Agregar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!--Editar registro-->
+    <div id="editForm">
+        <h3>Editar Ciudadano</h3>
+        <section>
+            <form action="javascript:void(0);" onsubmit="updateItem()">
+                <label>Identidad:</label>
+                <input type="text" id="edit-identidad">
+                <label>Nombre:</label>
+                <input type="text" id="edit-nombre">
+                <label>Apellido:</label>
+                <input type="text" id="edit-apellido">
+                <label>Edad:</label>
+                <input type="text" id="edit-edad">
+                <label>Residencia:</label>
+                <input type="text" id="edit-residencia">
+                <label>Vacunas:</label>
+                <input type="text" id="edit-vacunas">
+                <label>ID Vacuna:</label>
+                <input type="text" id="edit-idvacuna">
+                <label>Fecha de ultima dosis:</label>
+                <input type="text" id="edit-fechaultimadosis">
+                <br />
+                <button class="boton" onclick="closeInput()">Guardar</button>
+                <button class="boton" onclick="closeInput()">Cerrar</button>
+            </form>
+        </section>
+    </div>
+    <!--Mostrar datos registrados-->
+    <section>
+        <p id="counter"></p>
+
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>Identidad</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Residencia</th>
+                <th>Vacunas</th>
+                <th>ID vacuna</th>
+                <th>Fecha ultima dosis</th>
+                <th>Editar Registro</th>
+                <th>Eliminar Registro</th>
+            </tr>
+            <tbody id="DetCiudadanos"></tbody>
+        </table>
+    </section>
+
+    <script src="~/Scripts/App/jsCiudadanos.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getCiudadanos();
+    </script>
+</body>
+</html>
